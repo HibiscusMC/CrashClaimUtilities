@@ -342,12 +342,14 @@ public class ClaimAdminCommand extends BaseCommand {
                 PermState.NEUTRAL,
                 PermState.NEUTRAL,
                 PermState.NEUTRAL
-            )
+            ),
+            true
         );
 
         claim.getPerms().setPlayerPermissionSet(
             offlinePlayer.getUniqueId(),
-            plugin.getCrashClaim().getDataManager().getPermissionSetup().getOwnerPermissionSet().clone()
+            plugin.getCrashClaim().getDataManager().getPermissionSetup().getOwnerPermissionSet().clone(),
+            true
         );
 
         Player player = plugin.getServer().getPlayer(target);

@@ -101,12 +101,14 @@ public class ClaimTransferCommand extends BaseCommand {
                 PermState.NEUTRAL,
                 PermState.NEUTRAL,
                 PermState.NEUTRAL
-            )
+            ),
+            true
         );
 
         claim.getPerms().setPlayerPermissionSet(
             target,
-            plugin.getCrashClaim().getDataManager().getPermissionSetup().getOwnerPermissionSet().clone()
+            plugin.getCrashClaim().getDataManager().getPermissionSetup().getOwnerPermissionSet().clone(),
+            true
         );
 
         if (plugin.getConfig().getBoolean("commands.transfer.keep-as-admin")) {
