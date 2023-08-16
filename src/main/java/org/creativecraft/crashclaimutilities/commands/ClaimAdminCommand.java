@@ -36,7 +36,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param value  The world.
      */
     @Subcommand("list")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.list")
     @Syntax("[page] [world]")
     @CommandCompletion("@listPages @worlds")
     @Description("Retrieve a list of claims.")
@@ -105,7 +105,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param target The target player.
      */
     @Subcommand("player|lookup")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.player")
     @Syntax("<player>")
     @CommandCompletion("@players")
     @Description("Retrieve a list of the specified player's claims.")
@@ -160,7 +160,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param value  The claim ID.
      */
     @Subcommand("teleport|tp")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.teleport")
     @Syntax("<id>")
     @CommandCompletion("@claims")
     @Description("Teleport to the specified claim.")
@@ -229,7 +229,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param value  The claim ID.
      */
     @Subcommand("delete")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.delete")
     @Syntax("<id>")
     @CommandCompletion("@claims")
     @Description("Delete the specified claim.")
@@ -274,7 +274,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param value  The claim ID.
      */
     @Subcommand("setowner")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.setowner")
     @Syntax("<player> <id>")
     @CommandCompletion("@players @claims")
     @Description("Set the owner of the specified claim.")
@@ -379,7 +379,7 @@ public class ClaimAdminCommand extends BaseCommand {
      */
     @HelpCommand
     @Syntax("[page]")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.help")
     @Description("View the plugin help.")
     public void onHelp(CommandSender sender, CommandHelp help) {
         plugin.sendRawMessage(sender, plugin.localize("messages.help.header"));
@@ -404,7 +404,7 @@ public class ClaimAdminCommand extends BaseCommand {
      * @param sender The command sender.
      */
     @Subcommand("reload")
-    @CommandPermission("crashclaim.admin.claimadmin")
+    @CommandPermission("crashclaim.admin.reload")
     @Description("Reload the plugin configuration.")
     public void onReload(CommandSender sender) {
         try {
